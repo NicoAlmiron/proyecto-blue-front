@@ -1,22 +1,12 @@
 import React from "react";
-import {
-  Badge,
-  Button,
-  Col,
-  Container,
-  Form,
-  Nav,
-  NavDropdown,
-  Navbar,
-  Row,
-  Tab,
-  Tabs,
-} from "react-bootstrap";
+import { Badge, Button, Container, Form, Nav, Navbar } from "react-bootstrap";
 import "./../../css/menu.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCartShopping,
+  faHouse,
   faMagnifyingGlass,
+  faStore,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -34,7 +24,7 @@ const navbar = () => {
         <Navbar.Toggle aria-controls="navbarScroll" className="text-white" />
         <Navbar.Collapse id="navbarScroll" className="w-75 mt-sm-2">
           <div className="w-100 me-md-4">
-            <div>
+            <div className="text-dark">
               <Form className="d-flex my-2">
                 <Form.Control
                   type="search"
@@ -47,28 +37,28 @@ const navbar = () => {
                 </Button>
               </Form>
             </div>
-            <div className="d-flex justify-content-around">
+            <div className="mb-lg-auto">
               <Nav
-                className="my-2 my-lg-0 navbar-items d-flex justify-content-center align-items-center"
+                className="my-2 my-lg-2 navbar-items d-flex justify-content-sm-center align-items-sm-center text-center"
                 navbarScroll
               >
                 <Nav.Link
                   href="#homepage"
-                  className="item-navbar mx-md-2 mx-lg-5 mb-2"
+                  className="item-navbar mx-md-2 me-lg-auto ms-lg-4 mb-2"
                 >
-                  Inicio
+                  Inicio <FontAwesomeIcon icon={faHouse} />
                 </Nav.Link>
                 <Nav.Link
                   href="#product"
-                  className="item-navbar mx-md-2 mx-lg-5 mb-2"
+                  className="item-navbar mx-md-2 mx-lg-4 mb-2"
                 >
-                  Productos
+                  Productos <FontAwesomeIcon icon={faStore} />
                 </Nav.Link>
                 <Nav.Link
                   href="#contact"
-                  className="item-navbar mx-md-2 me-lg-5 mb-2"
+                  className="item-navbar mx-md-2 ms-lg-auto me-lg-4 mb-2"
                 >
-                  Contacto
+                  Contacto <FontAwesomeIcon icon={faUser} />
                 </Nav.Link>
               </Nav>
             </div>

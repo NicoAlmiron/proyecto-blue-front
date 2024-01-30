@@ -54,6 +54,13 @@
 
 .navbar-items {
   max-height: 150px;
+  font-size: 15px;
+}
+
+@media (min-width: 992px) {
+  .navbar-items {
+    font-size: 20px;
+  }
 }
 
 .button-cart-shopping {
